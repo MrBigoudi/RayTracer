@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <iostream>
 
-#include "TestVector.hpp"
+#include "testVector.hpp"
 #include "Vector3.hpp"
 
 using namespace maths;
