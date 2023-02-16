@@ -4,8 +4,9 @@
 #include <vector>
 
 #include "Image.hpp"
+#include "Scene.hpp"
 
-int main(int argc, char** argv){
+int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv){
 
     // utils::Image* image = new utils::Image(640, 480);
     // image->write("media/producedImages/test.ppm");

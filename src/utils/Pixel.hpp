@@ -98,6 +98,17 @@ class Pixel{
          * @return The pixel's blue component
         */
         int b() const {return int(mColor->b() * MAX_COLOR);}
+
+        /**
+         * Cast a pixel into a printable string
+         * @return The pixel as a string
+        */
+        std::string toString() const {
+            char buffer[256];
+            sprintf(buffer, "color: %s\nx: %d, y: %d", mColor->toString().c_str(), mPos[0], mPos[1]);
+            return buffer;
+        }
+
 };
 
 }

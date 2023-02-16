@@ -234,6 +234,23 @@ class Vector3{
                                 );
         };
 
+
+        /**
+         * Get the distance between 2 vectors
+         * @param v1 The first vector
+         * @param v2 The second vector
+         * @return The distance between v1 and v2
+        */
+        static float distance(const Vector3 & v1, const Vector3 & v2){
+            return sqrtf((v1.x()-v2.x())*(v1.x()-v2.x()) 
+                        + (v1.y()-v2.y())*(v1.y()-v2.y()) 
+                        + (v1.z()-v2.z())*(v1.z()-v2.z()));
+        };
+
+
+        /**
+         * Printer for the vector
+        */
         friend std::ostream& operator <<(std::ostream &out , const Vector3 & v){
             if(v.mType == COLOR)
                 out << "r: " << v.mVect[0] << ", g: " << v.mVect[1] << ", b: " << v.mVect[2];
@@ -241,6 +258,19 @@ class Vector3{
                 out << "x: " << v.mVect[0] << ", y: " << v.mVect[1] << ", z: " << v.mVect[2]; 
             return out; 
         };
+
+        /**
+         * Cast a vector into a printable string
+         * @return The vector as a string
+        */
+        std::string toString() const {
+            char buffer[50];
+            if(mType == COLOR)
+                sprintf(buffer, "r: %f, g: %f, b: %f", mVect[0], mVect[1], mVect[2]);
+            else
+                sprintf(buffer, "x: %f, y: %f, z: %f", mVect[0], mVect[1], mVect[2]);
+            return buffer;
+        }
 };
 
 };
