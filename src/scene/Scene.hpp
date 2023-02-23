@@ -1,6 +1,9 @@
 #pragma once
 
 #include <vector>
+#include "Camera.hpp"
+#include "Light.hpp"
+#include "objects/Object.hpp"
 
 namespace scene{
 
@@ -28,6 +31,21 @@ class Scene{
          * The camera of the scene
         */
         Camera* mCamera;
+
+
+    public:
+        /**
+         * A basic constructor
+         * @param objects The objects of the scene
+         * @param camera The scene's camera
+         * @param lights The scene's light sources
+        */
+        Scene(std::vector<Object*>objects = {}, Camera* camera = nullptr, std::vector<Light*>lights = {}){
+            mObjects = objects;
+            mCamera = camera;
+            mLights = lights;
+        }
+    
 
 };
 

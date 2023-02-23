@@ -19,7 +19,7 @@ DOCCONF := Doxyfile
 DOCGEN := doxygen
 
 # Create the list of directories
-DIRS = maths tests main utils scene
+DIRS = maths tests main utils scene scene/objects
 SOURCEDIRS = $(foreach dir, $(DIRS), $(addprefix $(SOURCEDIR)/, $(dir)))
 TARGETDIRS = $(foreach dir, $(DIRS), $(addprefix $(BUILDDIR)/, $(dir)))
 

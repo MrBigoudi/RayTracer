@@ -1,6 +1,4 @@
 #include "Sphere.hpp"
-#include "Vector3.hpp"
-#include <cstddef>
 
 using namespace scene;
 

@@ -4,7 +4,7 @@
 
 namespace scene {
 
-struct Texture_Material;
+class Texture_Material;
 
 /**
  * A class to represent uniform textures

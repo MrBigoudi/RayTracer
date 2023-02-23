@@ -6,8 +6,6 @@
 
 namespace scene{
 
-struct Object;
-
 /**
  * A class to represent a sphere
 */
