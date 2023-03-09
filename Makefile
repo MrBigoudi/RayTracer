@@ -19,7 +19,7 @@ DOCCONF := Doxyfile
 DOCGEN := doxygen
 
 # Create the list of directories
-DIRS = maths tests main utils scene scene/objects
+DIRS = maths maths/glm tests main utils scene scene/objects scene/camera opengl opengl/glad opengl/glfw opengl/shaders
 SOURCEDIRS = $(foreach dir, $(DIRS), $(addprefix $(SOURCEDIR)/, $(dir)))
 TARGETDIRS = $(foreach dir, $(DIRS), $(addprefix $(BUILDDIR)/, $(dir)))
 
@@ -44,8 +44,8 @@ CXX = g++
 
 # set the flags
 CXXFLAGS := -ggdb3 -Wall -Wextra
-LDFLAGS := -Llib
-LDLIBS := -lm
+LDFLAGS := -Llib -lGL -lglfw
+LDLIBS := -lm 
 
 # OS specific part
 ifeq ($(OS),Windows_NT)

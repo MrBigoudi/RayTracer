@@ -3,6 +3,7 @@
 #include <cmath>
 #include <iostream>
 #include <cassert>
+#include "glm/glm.hpp"
 
 namespace maths{
 
@@ -65,6 +66,17 @@ class Vector3{
             mVect[1] = v->mVect[1];
             mVect[2] = v->mVect[2];
             mType = v->mType;
+        }
+
+        /**
+         * Constructor by copy
+         * @param v The vector to copy as a glmv vector
+        */
+        Vector3(const glm::vec3 & v){
+            mVect[0] = v.x;
+            mVect[1] = v.y;
+            mVect[2] = v.z;
+            mType = POS;
         }
 
 
